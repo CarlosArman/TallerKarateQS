@@ -3,7 +3,7 @@ Feature: Create User
 
   Background:
     * configure ssl = true
-    Given url "https://reqres.in"
+    Given url baseURL
 
   @createAUser
   Scenario: Create a user

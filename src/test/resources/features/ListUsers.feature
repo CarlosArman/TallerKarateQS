@@ -3,7 +3,7 @@ Feature: List users
 
   @listUserByPage
   Scenario: List user by page
-    Given url "https://reqres.in/api/users?page=2"
+    Given url baseURL+"/api/users?page=2"
     When  method get
     Then  status 200
     And   print response
@@ -16,7 +16,7 @@ Feature: List users
 
   @listUserByPages
   Scenario Outline: List users on page <page>
-    Given url "https://reqres.in"
+    Given url baseURL
     *     path "/api/users"
     *     params  page = <page>
     And   header x-api-key = "reqres-free-v1"
