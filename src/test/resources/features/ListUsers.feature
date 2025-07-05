@@ -4,6 +4,7 @@ Feature: List users
   @listUserByPage
   Scenario: List user by page
     Given url baseURL+"/api/users?page=2"
+    And   header x-api-key = "reqres-free-v1"
     When  method get
     Then  status 200
     And   print response
